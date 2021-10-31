@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "stock_id": 1,
+      "uid": "777a2889-f384-4298-aedb-02b12dd95e4f",
+      "status": "RECEIVED",
+      "reference_number": "FV/1",
+      "currency": "PLN",
+      "comment": "",
+      "tax_gross": false,
+      "document_number": "PO-1",
+      "purchased_at": "2021-10-17T00:00:00",
+      "created_at": "2021-10-17T07:57:04",
+      "updated_at": "2021-10-17T07:57:06",
+      "total_price_net_money": { "amount": 94.02, "currency": "PLN" },
+      "total_price_gross_money": { "amount": 101.54, "currency": "PLN" },
+      "contact_id": 1,
+      "exchange_rate": 1.0,
+      "quantity": 2.0,
+      "quantity_received": 2.0,
+      "lock_status": "UNLOCKED"
+    },
+    {
+      "id": 2,
+      "stock_id": 1,
+      "uid": "f83a70e6-0ec4-41cc-b4fd-bea22a5a14b3",
+      "status": "RECEIVED",
+      "reference_number": "FV/2",
+      "currency": "PLN",
+      "comment": "",
+      "tax_gross": false,
+      "document_number": "PO-2",
+      "purchased_at": "2021-10-17T00:00:00",
+      "created_at": "2021-10-17T07:58:24",
+      "updated_at": "2021-10-17T07:58:24",
+      "total_price_net_money": { "amount": 64.08, "currency": "PLN" },
+      "total_price_gross_money": { "amount": 69.21, "currency": "PLN" },
+      "contact_id": 1,
+      "exchange_rate": 1.0,
+      "quantity": 4.0,
+      "quantity_received": 4.0,
+      "lock_status": "UNLOCKED"
+    }
+  ]
+}
