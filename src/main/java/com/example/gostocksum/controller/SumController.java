@@ -1,9 +1,11 @@
 package com.example.gostocksum.controller;
 
 import com.example.gostocksum.ResourceServerProxy;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.Response;
+import org.springframework.boot.json.JsonParseException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,8 +24,11 @@ public class SumController {
     }
 
     @RequestMapping("sum")
-    public ResponseEntity<String> sum() {
-        return ResponseEntity.ok(proxy.callData());
+    public ResponseEntity<String> sum() throws JsonProcessingException {
+        String data = proxy.callData();
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode json = mapper.readTree(data);
+        return ResponseEntity.ok(String.valueOf(getAmountOf(json)));
     }
 
     private JsonNode responseToJsonNode(Response response) throws IOException {
